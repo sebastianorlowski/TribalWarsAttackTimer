@@ -1,6 +1,16 @@
 package sample;
 
 public class MouseController {
+
+    private static MouseController instance = null;
+
+    public static MouseController getInstance() {
+        if(instance == null) {
+            instance = new MouseController();
+        }
+        return instance;
+    }
+
     int x;
     int y;
 

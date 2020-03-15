@@ -8,6 +8,7 @@ import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.util.Duration;
 
 import javax.swing.*;
@@ -17,6 +18,7 @@ import java.time.LocalTime;
 public class Controller {
 
     private static AddTime addTime = AddTime.getInstance();
+    private static MouseController mouseController = MouseController.getInstance();
 
     @FXML
     Label currentTime;
@@ -68,8 +70,12 @@ public class Controller {
 
     }
 
-    public void mouseClicker() {
+    public void mousePosition(MouseEvent e) {
+        int x = (int)e.getSceneX();
+        int y = (int)e.getSceneY();
 
+        mouseController.getCoords(x,y);
+        coords.setText(mouseController.toString());
     }
 
     public void buttonAddCoord() {
@@ -77,7 +83,8 @@ public class Controller {
 
     }
 
-    public void handleButtonAction(ActionEvent event) {
+    public void handleButtonAction() {
+
 
 
     }

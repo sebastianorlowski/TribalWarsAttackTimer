@@ -26,8 +26,8 @@
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="291.0" prefWidth="512.0">
          <children>
             <Button fx:id="buttonPlay" alignment="CENTER" layoutX="10.0" layoutY="80.0" mnemonicParsing="false" onAction="#buttonPlay" prefHeight="40.0" prefWidth="80.0" text="PLAY" />
-            <Label layoutX="160.0" layoutY="20.0" prefHeight="100.0" prefWidth="200.0" />
-            <Button fx:id="buttonAddCoord" alignment="CENTER" layoutX="10.0" layoutY="20.0" mnemonicParsing="false" onAction="#buttonAddCoord" prefHeight="40.0" prefWidth="80.0" text="COORD" />
+            <Label fx:id="coords" layoutX="160.0" layoutY="20.0" prefHeight="100.0" prefWidth="200.0" />
+            <Button fx:id="buttonAddCoord" alignment="CENTER" layoutX="10.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleButtonAction" onMouseClicked="#mousePosition" prefHeight="40.0" prefWidth="80.0" text="COORD" />
          </children></AnchorPane>
   </items>
 </SplitPane>
